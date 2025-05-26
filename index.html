@@ -235,12 +235,22 @@ Empowering Communication<br> <span class="elve"> Elevating Excellence</span>
           </div>
           <div class="form-area">
             <h2>Contact Us</h2>
-            <form action="">
-              <input type="text" placeholder="Full Name" />
-              <input type="email" placeholder="Email" />
-              <textarea cols="30" rows="3" placeholder="Your Message"></textarea>
-              <button type="submit">Send Message</button>
-            </form>
+           <form action="https://api.web3forms.com/submit" method="POST">
+
+  <!-- Web3Forms Access Key -->
+  <input type="hidden" name="access_key" value="f522a78d-a16c-44af-bc92-a4abff4f849f">
+
+  <!-- Form Inputs with styling preserved -->
+  <input type="text" name="name" placeholder="Full Name" required />
+  <input type="email" name="email" placeholder="Email" required />
+  <textarea name="message" cols="30" rows="3" placeholder="Your Message" required></textarea>
+
+  <!-- Honeypot Spam Protection -->
+  <input type="checkbox" name="botcheck" style="display: none;" />
+
+  <button type="submit">Send Message</button>
+</form>
+
             <div class="social-icons">
               <i class="facebook fab fa-facebook-f"></i>
               <i class="instagram fab fa-instagram"></i>
